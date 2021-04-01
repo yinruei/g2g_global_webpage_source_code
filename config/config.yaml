@@ -1,0 +1,4193 @@
+---
+General:
+    path: ./static/
+    scorecard_src: scorecard/mainindex.html
+    mode: 'G2'
+    G2_00Z: 'http://gver.rdc.cwb/00Z'
+    G2_12Z: 'http://gver.rdc.cwb/12Z'
+    G3_00Z: 'http://gver.rdc.cwb/00Z_G3'
+    G3_12Z: 'http://gver.rdc.cwb/12Z_G3'
+
+Menu:
+    SelectUpperAir:
+        - text: 'Anl'
+          value: 'Anl'
+          default_src: 
+              - '2D/d1/HGTprs_zmean.png'
+        - text: 'Day1'
+          value: 'Day1'
+          default_src: 
+              - '2D/d2/HGTprs_zmean.png'
+        - text: 'Day5'
+          value: 'Day5'
+          default_src: 
+              - '2D/d3/HGTprs_zmean.png'
+        - text: 'Day8'
+          value: 'Day8'
+          default_src: 
+              - '2D/d4/HGTprs_zmean.png' 
+    SelectSurface:
+        - text: 'Anl'
+          value: 'Anl'
+          default_src: 
+              - '2D/d1/HGTprs_zmean.png'
+        - text: 'D1'
+          value: 'D1'
+          default_src: 
+              - '2D/d2/HGTprs_zmean.png'
+        - text: 'D2'
+          value: 'D2'
+          default_src: 
+              - '2D/d3/HGTprs_zmean.png'
+        - text: 'D3'
+          value: 'D3'
+          default_src: 
+              - '2D/d3/HGTprs_zmean.png' 
+    SelectEnsemble:
+        - text : 'U250'
+          value: 'u250'
+          default_src: 
+              - ENS_VRFY/nhu250_bss.gif
+              - ENS_VRFY/nhu250_rpss.gif
+        - text : 'V250'
+          value: 'v250'
+          default_src:
+              - ENS_VRFY/nhv250_bss.gif
+              - ENS_VRFY/nhv250_rpss.gif
+        - text : 'Z500'
+          value: 'z500'
+          default_src: 
+              - ENS_VRFY/nhz500_bss.gif
+              - ENS_VRFY/nhz500_rpss.gif
+        - text : 'V850'
+          value: 'v850'
+          default_src: 
+              - ENS_VRFY/nhv850_bss.gif
+              - ENS_VRFY/nhv850_rpss.gif
+        - text : 'U850'
+          value: 'u850'
+          default_src: 
+              - ENS_VRFY/nhu850_bss.gif
+              - ENS_VRFY/nhu850_rpss.gif
+        - text : 'T850'
+          value: 't850'
+          default_src:
+              - ENS_VRFY/nht850_bss.gif
+              - ENS_VRFY/nht850_rpss.gif
+        - text : 'Z1000'
+          value: 'z1000'
+          default_src: 
+              - ENS_VRFY/nhz1000_bss.gif
+              - ENS_VRFY/nhz1000_rpss.gif
+        - text : 'U10m'
+          value: 'u10m'
+          default_src: 
+              - ENS_VRFY/nhu10m_bss.gif
+              - ENS_VRFY/nhu10m_rpss.gif
+        - text : 'V10m'
+          value: 'v10m'
+          default_src: 
+              - ENS_VRFY/nhv10m_bss.gif
+              - ENS_VRFY/nhv10m_rpss.gif
+        - text : 'T2m'
+          value: 't2m'
+          default_src: 
+              - ENS_VRFY/nht2m_bss.gif
+              - ENS_VRFY/nht2m_rpss.gif
+    SelectEnsembleRainfall:
+        - text : 'CRPS/BSS/ETS'
+          value: 'CRPS/RMSE/MERR'
+          default_src: 
+              - ENS_VRFY/PCP_NHX_CRPS.gif
+              - ENS_VRFY/PCP_NHX_RMSE.gif
+              - ENS_VRFY/PCP_NHX_MERR.gif
+
+        - text : 'BS/BSS/ETS'
+          value: 'ETS/Brier/ETSSKILL'
+          default_src: 
+              - ENS_VRFY/PCP_NHX_ETS_1.00.gif
+              - ENS_VRFY/PCP_NHX_Brier_1.00.gif
+              - ENS_VRFY/PCP_NHX_ETSSKILL_1.00.gif
+        - text : 'RELI'
+          value: 'reli'
+          default_src: 
+              - ENS_VRFY/PCP_NHX_RELI_1.00_day1.gif
+    SelectAnomalyCorrelation:
+        - text: 'Height'
+          value: 'Height'
+          default_src: 
+              - 'allmodel/daily/cor/cor_day5_HGT_P500_{=MODE=}NHX.png'
+        - text: 'Humidity'
+          value: 'Humidity'
+          default_src: 
+              - 'allmodel/daily/cor/cor_day5_RH_P500_{=MODE=}NHX.png'
+        - text: 'Vector Wind'
+          value: 'VectorWind'
+          default_src: 
+              - 'allmodel/daily/cor/cor_day3_WIND_P850_{=MODE=}TRO.png'
+        - text: 'Zonal Wind'
+          value: 'ZonalWind'
+          default_src: 
+              - 'allmodel/daily/cor/cor_day3_U_P850_{=MODE=}TRO.png' 
+        - text: 'Meridional Wind'
+          value: 'MeridionalWind'
+          default_src: 
+              - 'allmodel/daily/cor/cor_day3_V_P850_{=MODE=}TRO.png'
+        - text: 'Temperature'
+          value: 'Temperature'
+          default_src: 
+              - 'allmodel/daily/cor/cor_day5_T_P500_{=MODE=}NHX.png'
+        - text: 'SLP'
+          value: 'SLP'
+          default_src: 
+              - 'allmodel/daily/cor/cor_day5_PMSL_MSL_{=MODE=}NHX.png'
+    SelectBias:
+        - text: 'Height'
+          value: 'Height'
+          default_src: 
+              - 'allmodel/daily/bias/biaspmean_HGT_{=MODE=}NHX.png'
+        - text: 'Humidity'
+          value: 'Humidity'
+          default_src: 
+              - 'allmodel/daily/bias/biaspmean_RH_{=MODE=}NHX.png'
+        - text: 'Wind Speed'
+          value: 'WindSpeed'
+          default_src: 
+                - 'allmodel/daily/bias/biaspmean_WIND_{=MODE=}TRO.png'
+        - text: 'Zonal Wind'
+          value: 'ZonalWind'
+          default_src: 
+              - 'allmodel/daily/bias/biaspmean_U_{=MODE=}TRO.png' 
+        - text: 'Meridional Wind'
+          value: 'MeridionalWind'
+          default_src: 
+              - 'allmodel/daily/bias/biaspmean_V_{=MODE=}TRO.png'
+        - text: 'Temperature'
+          value: 'Temperature'
+          default_src: 
+              - 'allmodel/daily/bias/biaspmean_T_{=MODE=}NHX.png'
+        - text: 'O3'
+          value: 'O3'
+          default_src: 
+              - 'allmodel/daily/bias/biaspmean_O3_{=MODE=}NHX.png'  
+    SelectRMSE:
+        - text: 'Height'
+          value: 'Height'
+          default_src: 
+              - 'allmodel/daily/rms/rmspmean_HGT_{=MODE=}NHX.png'
+        - text: 'Humidity'
+          value: 'Humidity'
+          default_src: 
+              - 'allmodel/daily/rms/rmspmean_RH_{=MODE=}NHX.png'
+        - text: 'Vector Wind'
+          value: 'VectorWind'
+          default_src: 
+              - 'allmodel/daily/rms/rmspmean_WIND_{=MODE=}TRO.png'
+        - text: 'Zonal Wind'
+          value: 'ZonalWind'
+          default_src: 
+              - 'allmodel/daily/rms/rmspmean_U_{=MODE=}TRO.png' 
+        - text: 'Meridional Wind'
+          value: 'MeridionalWind'
+          default_src: 
+              - 'allmodel/daily/rms/rmspmean_V_{=MODE=}TRO.png'
+        - text: 'Temperature'
+          value: 'Temperature'
+          default_src: 
+              - 'allmodel/daily/rms/rmspmean_T_{=MODE=}NHX.png'
+        - text: 'O3'
+          value: 'O3'
+          default_src: 
+              - 'allmodel/daily/rms/rmspmean_O3_{=MODE=}NHX.png'   
+    SelectMSESS:
+        - text: 'Height'
+          value: 'Height'
+          default_src: 
+              - 'allmodel/daily/msess/msesspmean_HGT_{=MODE=}NHX.png'
+        - text: 'Humidity'
+          value: 'Humidity'
+          default_src: 
+              - 'allmodel/daily/msess/msesspmean_RH_{=MODE=}NHX.png'
+        - text: 'Vector Wind'
+          value: 'VectorWind'
+          default_src: 
+              - 'allmodel/daily/msess/msesspmean_WIND_{=MODE=}TRO.png'
+        - text: 'Zonal Wind'
+          value: 'ZonalWind'
+          default_src: 
+              - 'allmodel/daily/msess/msesspmean_U_{=MODE=}TRO.png' 
+        - text: 'Meridional Wind'
+          value: 'MeridionalWind'
+          default_src: 
+              - 'allmodel/daily/msess/msesspmean_V_{=MODE=}TRO.png'
+        - text: 'Temperature'
+          value: 'Temperature'
+          default_src: 
+              - 'allmodel/daily/msess/msesspmean_T_{=MODE=}NHX.png'
+        - text: 'O3'
+          value: 'O3'
+          default_src: 
+              - 'allmodel/daily/msess/msesspmean_O3_{=MODE=}NHX.png'   
+    SelectRSD:
+        - text: 'Height'
+          value: 'Height'
+          default_src: 
+              - 'allmodel/daily/rsd/rsdpmean_HGT_{=MODE=}NHX.png'
+        - text: 'Humidity'
+          value: 'Humidity'
+          default_src: 
+              - 'allmodel/daily/rsd/rsdpmean_RH_{=MODE=}NHX.png'
+        - text: 'Vector Wind'
+          value: 'VectorWind'
+          default_src: 
+              - 'allmodel/daily/rsd/rsdpmean_WIND_{=MODE=}TRO.png'
+        - text: 'Zonal Wind'
+          value: 'ZonalWind'
+          default_src: 
+              - 'allmodel/daily/rsd/rsdpmean_U_{=MODE=}TRO.png' 
+        - text: 'Meridional Wind'
+          value: 'MeridionalWind'
+          default_src: 
+              - 'allmodel/daily/rsd/rsdpmean_V_{=MODE=}TRO.png'
+        - text: 'Temperature'
+          value: 'Temperature'
+          default_src: 
+              - 'allmodel/daily/rsd/rsdpmean_T_{=MODE=}NHX.png.png'
+        - text: 'O3'
+          value: 'O3'
+          default_src: 
+              - 'allmodel/daily/rsd/rsdpmean_O3_{=MODE=}NHX.png'  
+    SelectEMD:
+        - text: 'Height'
+          value: 'Height'
+          default_src: 
+              - 'allmodel/daily/emd/emdpmean_HGT_{=MODE=}NHX.png'
+        - text: 'Humidity'
+          value: 'Humidity'
+          default_src: 
+              - 'allmodel/daily/emd/emdpmean_RH_{=MODE=}NHX.png'
+        - text: 'Vector Wind'
+          value: 'VectorWind'
+          default_src: 
+              - 'allmodel/daily/emd/emdpmean_WIND_{=MODE=}TRO.png'
+        - text: 'Zonal Wind'
+          value: 'ZonalWind'
+          default_src: 
+              - 'allmodel/daily/emd/emdpmean_U_{=MODE=}TRO.png' 
+        - text: 'Meridional Wind'
+          value: 'MeridionalWind'
+          default_src: 
+              - 'allmodel/daily/emd/emdpmean_V_{=MODE=}TRO.png'
+        - text: 'Temperature'
+          value: 'Temperature'
+          default_src: 
+              - 'allmodel/daily/emd/emdpmean_T_{=MODE=}NHX.png'
+        - text: 'O3'
+          value: 'O3'
+          default_src: 
+              - 'allmodel/daily/emd/emdpmean_O3_{=MODE=}NHX.png' 
+    SelectEPV:
+        - text: 'Height'
+          value: 'Height'
+          default_src: 
+              - 'allmodel/daily/epv/epvpmean_HGT_{=MODE=}NHX.png'
+        - text: 'Humidity'
+          value: 'Humidity'
+          default_src: 
+              - 'allmodel/daily/epv/epvpmean_RH_{=MODE=}NHX.png'
+        - text: 'Vector Wind'
+          value: 'VectorWind'
+          default_src: 
+              - 'allmodel/daily/epv/epvpmean_WIND_{=MODE=}TRO.png'
+        - text: 'Zonal Wind'
+          value: 'ZonalWind'
+          default_src: 
+              - 'allmodel/daily/epv/epvpmean_U_{=MODE=}TRO.png' 
+        - text: 'Meridional Wind'
+          value: 'MeridionalWind'
+          default_src: 
+              - 'allmodel/daily/epv/epvpmean_V_{=MODE=}TRO.png'
+        - text: 'Temperature'
+          value: 'Temperature'
+          default_src: 
+              - 'allmodel/daily/epv/epvpmean_T_{=MODE=}NHX.png'
+        - text: 'O3'
+          value: 'O3'
+          default_src: 
+              - 'allmodel/daily/epv/epvpmean_O3_{=MODE=}NHX.png'    
+    SelectPCOR:
+        - text: 'Height'
+          value: 'Height'
+          default_src: 
+              - 'allmodel/daily/pcor/pcorpmean_HGT_{=MODE=}NHX.png'
+        - text: 'Humidity'
+          value: 'Humidity'
+          default_src: 
+              - 'allmodel/daily/pcor/pcorpmean_RH_{=MODE=}NHX.png'
+        - text: 'Vector Wind'
+          value: 'VectorWind'
+          default_src: 
+              - 'allmodel/daily/pcor/pcorpmean_WIND_{=MODE=}TRO.png'
+        - text: 'Zonal Wind'
+          value: 'ZonalWind'
+          default_src: 
+              - 'allmodel/daily/pcor/pcorpmean_U_{=MODE=}TRO.png' 
+        - text: 'Meridional Wind'
+          value: 'MeridionalWind'
+          default_src: 
+              - 'allmodel/daily/pcor/pcorpmean_V_{=MODE=}TRO.png'
+        - text: 'Temperature'
+          value: 'Temperature'
+          default_src: 
+              - 'allmodel/daily/pcor/pcorpmean_T_{=MODE=}NHX.png'
+        - text: 'O3'
+          value: 'O3'
+          default_src: 
+              - 'allmodel/daily/pcor/pcorpmean_O3_{=MODE=}NHX.png'  
+    SelectSFC:
+        - text: 'T2m'
+          value: 'T2m'
+          default_src: 
+              - 'allmodel/daily/sfc/sfc_day5_T2m_SL1L2_{=MODE=}.png'
+        - text: 'RH2m'
+          value: 'RH2m'
+          default_src: 
+              - 'allmodel/daily/sfc/sfc_day5_RH2m_SL1L2_{=MODE=}.png'
+        - text: 'SPFH2m'
+          value: 'SPFH2m'
+          default_src: 
+              - 'allmodel/daily/sfc/sfc_day5_SPFH2m_SL1L2_{=MODE=}.png' 
+        - text: 'PBL HGT'
+          value: 'HPBL'
+          default_src: 
+              - 'allmodel/daily/sfc/sfc_day5_HPBL_SL1L2_{=MODE=}.png'
+        - text: 'Ps'
+          value: 'PSFC'
+          default_src: 
+              - 'allmodel/daily/sfc/sfc_day5_PSFC_SL1L2_{=MODE=}.png'
+        - text: 'SLP'
+          value: 'PSL'
+          default_src: 
+              - 'allmodel/daily/sfc/sfc_day5_PSL_SL1L2_{=MODE=}.png' 
+        - text: '10m U'
+          value: 'U10m'
+          default_src: 
+              - 'allmodel/daily/sfc/sfc_day5_U10m_SL1L2_{=MODE=}.png'
+        - text: '10m V'
+          value: 'V10m'
+          default_src: 
+              - 'allmodel/daily/sfc/sfc_day5_V10m_SL1L2_{=MODE=}.png' 
+        - text: 'Snow'
+          value: 'WEASD'
+          default_src: 
+              - 'allmodel/daily/sfc/sfc_day5_WEASD_SL1L2_{=MODE=}.png'
+        - text: 'Soil T'
+          value: 'TSOILT'
+          default_src: 
+              - 'allmodel/daily/sfc/sfc_day5_TSOILT_SL1L2_{=MODE=}.png'
+        - text: 'Soil M'
+          value: 'WSOILT'
+          default_src: 
+              - 'allmodel/daily/sfc/sfc_day5_WSOILT_SL1L2_{=MODE=}.png' 
+        - text: 'CAPE'
+          value: 'CAPE'
+          default_src: 
+              - 'allmodel/daily/sfc/sfc_day5_CAPE_SL1L2_{=MODE=}.pngg'
+        - text: 'Cld Water'
+          value: 'CWAT'
+          default_src: 
+              - 'allmodel/daily/sfc/sfc_day5_CWAT_SL1L2_{=MODE=}.png'
+        - text: 'Clm Water'
+          value: 'PWAT'
+          default_src: 
+              - 'allmodel/daily/sfc/sfc_day5_PWAT_SL1L2_{=MODE=}.png' 
+        - text: 'Trop HGT'
+          value: 'HGTTRP'
+          default_src: 
+              - 'allmodel/daily/sfc/sfc_day5_HGTTRP_SL1L2_{=MODE=}.png'
+        - text: 'Trop Temp'
+          value: 'TMPTRP'
+          default_src: 
+              - 'allmodel/daily/sfc/sfc_day5_TMPTRP_SL1L2_{=MODE=}.png'
+        - text: 'Clm Ozone'
+          value: 'TOZNE'
+          default_src: 
+              - 'allmodel/daily/sfc/sfc_day5_TOZNE_SL1L2_{=MODE=}.png'                                                                                                                       
+
+TopMenu:
+    SelectUpperAir:
+        Anl:
+            title: "Zonal Means and Lat-Lon Distributions on Specified Layers."
+            src_template: 
+                - 2D/d1/{parameter}prs{row}.png  
+            rows_per_table: 9
+            row:
+                - text: Zonal Means
+                  filename: _zmean
+                - text: 1000 hPa
+                  filename: 1000
+                - text: 850 hPa
+                  filename: 850
+                - text: 700 hPa
+                  filename: 700
+                - text: 500 hPa
+                  filename: 500
+                - text: 200 hPa
+                  filename: 200
+                - text: 100 hPa
+                  filename: 100    
+                - text: 70 hPa 
+                  filename: 70  
+                - text: 50 hPa 
+                  filename: 50  
+                - text: 10 hPa 
+                  filename: 10 
+                - text: 5 hPa 
+                  filename: 5  
+                - text: 1 hPa 
+                  filename: 1 
+            parameter:
+                - text: T
+                  filename: TMP 
+                - text: Z
+                  filename: HGT 
+                - text: U 
+                  filename: UGRD 
+                - text: V 
+                  filename: VGRD
+                - text: W
+                  filename: VVEL
+                - text: RH 
+                  filename: RH
+                - text: Q 
+                  filename: SPFH
+                - text: CLW 
+                  filename: CLWMR
+                - text: O3 
+                  filename: O3MR     
+        Day1:
+            title: "Zonal Means and Lat-Lon Distributions on Specified Layers. (D1)"
+            src_template: 
+                - 2D/d2/{parameter}prs{row}.png  
+            rows_per_table: 6
+            row:
+                - text: Zonal Means
+                  filename: _zmean
+                - text: 1000 hPa
+                  filename: 1000
+                - text: 850 hPa
+                  filename: 850
+                - text: 700 hPa
+                  filename: 700
+                - text: 500 hPa
+                  filename: 500
+                - text: 200 hPa
+                  filename: 200
+                - text: 100 hPa
+                  filename: 100    
+                - text: 70 hPa 
+                  filename: 70  
+                - text: 50 hPa 
+                  filename: 50  
+                - text: 10 hPa 
+                  filename: 10 
+                - text: 5 hPa 
+                  filename: 5  
+                - text: 1 hPa 
+                  filename: 1                                     
+            parameter:
+                - text: T
+                  filename: TMP 
+                - text: Z
+                  filename: HGT           
+                - text: U 
+                  filename: UGRD                                 
+                - text: V 
+                  filename: VGRD
+                - text: W
+                  filename: VVEL
+                - text: RH 
+                  filename: RH
+                - text: Q 
+                  filename: SPFH
+                - text: CLW 
+                  filename: CLWMR
+                - text: O3 
+                  filename: O3MR                        
+        Day5:
+            title: "Zonal Means and Lat-Lon Distributions on Specified Layers. (Day5)"
+            src_template: 
+                - 2D/d3/{parameter}prs{row}.png  
+            rows_per_table: 6
+            row:
+                - text: Zonal Means
+                  filename: _zmean
+                - text: 1000 hPa
+                  filename: 1000
+                - text: 850 hPa
+                  filename: 850
+                - text: 700 hPa
+                  filename: 700
+                - text: 500 hPa
+                  filename: 500
+                - text: 200 hPa
+                  filename: 200
+                - text: 100 hPa
+                  filename: 100    
+                - text: 70 hPa 
+                  filename: 70  
+                - text: 50 hPa 
+                  filename: 50  
+                - text: 10 hPa 
+                  filename: 10 
+                - text: 5 hPa 
+                  filename: 5  
+                - text: 1 hPa 
+                  filename: 1                                     
+            parameter:
+                - text: T
+                  filename: TMP 
+                - text: Z
+                  filename: HGT           
+                - text: U 
+                  filename: UGRD                                 
+                - text: V 
+                  filename: VGRD
+                - text: W
+                  filename: VVEL
+                - text: RH 
+                  filename: RH
+                - text: Q 
+                  filename: SPFH
+                - text: CLW 
+                  filename: CLWMR
+                - text: O3 
+                  filename: O3MR  
+        Day8:
+            title: "Zonal Means and Lat-Lon Distributions on Specified Layers. (Day8)"
+            src_template: 
+                - 2D/d4/{parameter}prs{row}.png  
+            rows_per_table: 6
+            row:
+                - text: Zonal Means
+                  filename: _zmean
+                - text: 1000 hPa
+                  filename: 1000
+                - text: 850 hPa
+                  filename: 850
+                - text: 700 hPa
+                  filename: 700
+                - text: 500 hPa
+                  filename: 500
+                - text: 200 hPa
+                  filename: 200
+                - text: 100 hPa
+                  filename: 100    
+                - text: 70 hPa 
+                  filename: 70  
+                - text: 50 hPa 
+                  filename: 50  
+                - text: 10 hPa 
+                  filename: 10 
+                - text: 5 hPa 
+                  filename: 5  
+                - text: 1 hPa 
+                  filename: 1
+            parameter:
+                - text: T
+                  filename: TMP 
+                - text: Z
+                  filename: HGT
+                - text: U 
+                  filename: UGRD 
+                - text: V 
+                  filename: VGRD
+                - text: W
+                  filename: VVEL
+                - text: RH 
+                  filename: RH
+                - text: Q 
+                  filename: SPFH
+                - text: CLW 
+                  filename: CLWMR
+                - text: O3 
+                  filename: O3MR  
+    SelectSurface:
+        Anl:
+            src_template: 
+                - 2D/d1/{parameter}_gb.png  
+            cols_per_table: 10                                   
+            parameter:
+                - text: T2m
+                  filename: TMP2msfc
+                  color: "#C8E6C9"
+                - text: T2mMax
+                  filename: TMAX2msfc 
+                  color: "#C8E6C9"         
+                - text: T2mMin
+                  filename: TMIN2msfc  
+                  color: "#C8E6C9"                               
+                - text: DPT2m 
+                  filename: DPT2msfc
+                  color: "#C8E6C9"
+                - text: RH2m
+                  filename: RH2msfc
+                  color: "#C8E6C9"
+                - text: Q2m
+                  filename: SPFH2msfc
+                  color: "#C8E6C9"
+                - text: Q 
+                  filename: SPFHsfc
+                  color: "#C8E6C9"
+                - text: TSkin
+                  filename: TMPsfcsfc
+                  color: "#C8E6C9"
+                - text: PRCP
+                  filename: APCPsfcs
+                  color: "#C8E6C9"
+                - text: C_PRCP  
+                  filename: ACPCPsfc
+                  color: "#C8E6C9"
+                - text: L_PRCP
+                  filename: NCPCPsfc
+                  color: "#C8E6C9"
+                - text: Runoff
+                  filename: WATRsfc
+                  color: "#C8E6C9"
+                - text: WEASD
+                  filename: WEASDsfc
+                  color: "#C8E6C9"
+                - text: SNOD
+                  filename: SNODsfc
+                  color: "#C8E6C9" 
+                - text: PWAT
+                  filename: PWATclm
+                  color: "#C8E6C9"
+                - text: CWAT
+                  filename: CWATclm 
+                  color: "#C8E6C9"         
+                - text: CRAIN
+                  filename: CRAINsfc  
+                  color: "#C8E6C9"                               
+                - text: CSNOW
+                  filename: CSNOWsfc
+                  color: "#C8E6C9"
+                - text: CICEP
+                  filename: CIECPsfc
+                  color: "#C8E6C9"
+                - text: CFRZR
+                  filename: CFRZRsfc
+                  color: "#C8E6C9"
+                - text: PSL
+                  filename: PRMSLmsl
+                  color: "#C8E6C9"
+                - text: PSL_eta
+                  filename: MSLETmsl
+                  color: "#C8E6C9"
+                - text: Psfc
+                  filename: PRESsfc
+                  color: "#C8E6C9"
+                - text: LFTX 
+                  filename: LFTXsfc
+                  color: "#C8E6C9"
+                - text: BestLFTX
+                  filename: no4LFTXsfc
+                  color: "#C8E6C9"
+                - text: CAPE
+                  filename: CAPEsfc
+                  color: "#C8E6C9"
+                - text: CIN
+                  filename: CINsfc
+                  color: "#C8E6C9"
+                - text: CWROK
+                  filename: CWROKclm
+                  color: "#C8E6C9"                     
+                - text: O3
+                  filename: TOZNEclm
+                  color: "#C8E6C9"
+                - text: VIS
+                  filename: VISsfc 
+                  color: "#C8E6C9"         
+                - text: VRATE
+                  filename: VRATEpbl
+                  color: "#C8E6C9"                               
+                - text: Sfc HGT 
+                  filename: HGTsfc
+                  color: "#C8E6C9"
+                - text: HGThgfl
+                  filename: HGThgfl
+                  color: "#C8E6C9"
+                - text: Heat Idx
+                  filename: HINDEXsfc
+                  color: "#C8E6C9"
+                - text: PBL HGT
+                  filename: HPBLsfc
+                  color: "#C8E6C9"
+                - text: Ice frc
+                  filename: ICECsfc
+                  color: "#C8E6C9"
+                - text: Ice dpt
+                  filename: IECDKfcs
+                  color: "#C8E6C9"
+                - text: U GWD  
+                  filename: UGWDsfc
+                  color: "#E1BEE7"
+                - text: V GWD
+                  filename: VGWDsfc
+                  color: "#E1BEE7"
+                - text: U STS
+                  filename: SFLXsfc
+                  color: "#E1BEE7"
+                - text: V STS
+                  filename: VFLXsfc
+                  color: "#E1BEE7"
+                - text: U10m
+                  filename: UGRD10m
+                  color: "#E1BEE7" 
+                - text: V10m
+                  filename: VGRD10m
+                  color: "#E1BEE7"
+                - text: Upbl
+                  filename: UGRDpbl 
+                  color: "#E1BEE7"         
+                - text: Vpbl
+                  filename: VGRDpbl  
+                  color: "#E1BEE7"                               
+                - text: FRICV
+                  filename: FRICVsfc
+                  color: "#E1BEE7"
+                - text: GUST
+                  filename: GUSTsfc
+                  color: "#E1BEE7"
+                - text: Dn LW
+                  filename: DLWRFsfc
+                  color: "#FFF9C4"
+                - text: Up LW
+                  filename: ULWRFsfc
+                  color: "#FFF9C4"
+                - text: OLR
+                  filename: ULWRFtoa
+                  color: "#FFF9C4"
+                - text: Dn SW
+                  filename: DSWRFsfc
+                  color: "#FFF9C4"
+                - text: Up SW
+                  filename: USWRFsfc
+                  color: "#FFF9C4"
+                - text: TOA SW
+                  filename: USWRFtoa
+                  color: "#FFF9C4"
+                - text: ALBDO
+                  filename: ALBDOsfc
+                  color: "#FFF9C4"
+                - text: Gnd FLUX
+                  filename: GFLUXsfc
+                  color: "#FFF9C4"
+        D1:
+            src_template: 
+                - 2D/d2/{parameter}_gb.png  
+            cols_per_table: 10                                   
+            parameter:
+                - text: T2m
+                  filename: TMP2msfc
+                  color: "#C8E6C9"
+                - text: T2mMax
+                  filename: TMAX2msfc 
+                  color: "#C8E6C9"         
+                - text: T2mMin
+                  filename: TMIN2msfc  
+                  color: "#C8E6C9"                               
+                - text: DPT2m 
+                  filename: DPT2msfc
+                  color: "#C8E6C9"
+                - text: RH2m
+                  filename: RH2msfc
+                  color: "#C8E6C9"
+                - text: Q2m
+                  filename: SPFH2msfc
+                  color: "#C8E6C9"
+                - text: Q 
+                  filename: SPFHsfc
+                  color: "#C8E6C9"
+                - text: TSkin
+                  filename: TMPsfcsfc
+                  color: "#C8E6C9"
+                - text: PRCP
+                  filename: APCPsfcs
+                  color: "#C8E6C9"
+                - text: C_PRCP  
+                  filename: ACPCPsfc
+                  color: "#C8E6C9"
+                - text: L_PRCP
+                  filename: NCPCPsfc
+                  color: "#C8E6C9"
+                - text: Runoff
+                  filename: WATRsfc
+                  color: "#C8E6C9"
+                - text: WEASD
+                  filename: WEASDsfc
+                  color: "#C8E6C9"
+                - text: SNOD
+                  filename: SNODsfc
+                  color: "#C8E6C9" 
+                - text: PWAT
+                  filename: PWATclm
+                  color: "#C8E6C9"
+                - text: CWAT
+                  filename: CWATclm 
+                  color: "#C8E6C9"         
+                - text: CRAIN
+                  filename: CRAINsfc  
+                  color: "#C8E6C9"                               
+                - text: CSNOW
+                  filename: CSNOWsfc
+                  color: "#C8E6C9"
+                - text: CICEP
+                  filename: CIECPsfc
+                  color: "#C8E6C9"
+                - text: CFRZR
+                  filename: CFRZRsfc
+                  color: "#C8E6C9"
+                - text: PSL
+                  filename: PRMSLmsl
+                  color: "#C8E6C9"
+                - text: PSL_eta
+                  filename: MSLETmsl
+                  color: "#C8E6C9"
+                - text: Psfc
+                  filename: PRESsfc
+                  color: "#C8E6C9"
+                - text: LFTX 
+                  filename: LFTXsfc
+                  color: "#C8E6C9"
+                - text: BestLFTX
+                  filename: no4LFTXsfc
+                  color: "#C8E6C9"
+                - text: CAPE
+                  filename: CAPEsfc
+                  color: "#C8E6C9"
+                - text: CIN
+                  filename: CINsfc
+                  color: "#C8E6C9"
+                - text: CWROK
+                  filename: CWROKclm
+                  color: "#C8E6C9"                     
+                - text: O3
+                  filename: TOZNEclm
+                  color: "#C8E6C9"
+                - text: VIS
+                  filename: VISsfc 
+                  color: "#C8E6C9"         
+                - text: VRATE
+                  filename: VRATEpbl
+                  color: "#C8E6C9"                               
+                - text: Sfc HGT 
+                  filename: HGTsfc
+                  color: "#C8E6C9"
+                - text: HGThgfl
+                  filename: HGThgfl
+                  color: "#C8E6C9"
+                - text: Heat Idx
+                  filename: HINDEXsfc
+                  color: "#C8E6C9"
+                - text: PBL HGT
+                  filename: HPBLsfc
+                  color: "#C8E6C9"
+                - text: Ice frc
+                  filename: ICECsfc
+                  color: "#C8E6C9"
+                - text: Ice dpt
+                  filename: IECDKfcs
+                  color: "#C8E6C9"
+                - text: U GWD  
+                  filename: UGWDsfc
+                  color: "#E1BEE7"
+                - text: V GWD
+                  filename: VGWDsfc
+                  color: "#E1BEE7"
+                - text: U STS
+                  filename: SFLXsfc
+                  color: "#E1BEE7"
+                - text: V STS
+                  filename: VFLXsfc
+                  color: "#E1BEE7"
+                - text: U10m
+                  filename: UGRD10m
+                  color: "#E1BEE7" 
+                - text: V10m
+                  filename: VGRD10m
+                  color: "#E1BEE7"
+                - text: Upbl
+                  filename: UGRDpbl 
+                  color: "#E1BEE7"         
+                - text: Vpbl
+                  filename: VGRDpbl  
+                  color: "#E1BEE7"                               
+                - text: FRICV
+                  filename: FRICVsfc
+                  color: "#E1BEE7"
+                - text: GUST
+                  filename: GUSTsfc
+                  color: "#E1BEE7"
+                - text: Dn LW
+                  filename: DLWRFsfc
+                  color: "#FFF9C4"
+                - text: Up LW
+                  filename: ULWRFsfc
+                  color: "#FFF9C4"
+                - text: OLR
+                  filename: ULWRFtoa
+                  color: "#FFF9C4"
+                - text: Dn SW
+                  filename: DSWRFsfc
+                  color: "#FFF9C4"
+                - text: Up SW
+                  filename: USWRFsfc
+                  color: "#FFF9C4"
+                - text: TOA SW
+                  filename: USWRFtoa
+                  color: "#FFF9C4"
+                - text: ALBDO
+                  filename: ALBDOsfc
+                  color: "#FFF9C4"
+                - text: Gnd FLUX
+                  filename: GFLUXsfc
+                  color: "#FFF9C4"
+        D2:
+            src_template: 
+                - 2D/d3/{parameter}_gb.png  
+            cols_per_table: 10                                   
+            parameter:
+                - text: T2m
+                  filename: TMP2msfc
+                  color: "#C8E6C9"
+                - text: T2mMax
+                  filename: TMAX2msfc 
+                  color: "#C8E6C9"         
+                - text: T2mMin
+                  filename: TMIN2msfc  
+                  color: "#C8E6C9"                               
+                - text: DPT2m 
+                  filename: DPT2msfc
+                  color: "#C8E6C9"
+                - text: RH2m
+                  filename: RH2msfc
+                  color: "#C8E6C9"
+                - text: Q2m
+                  filename: SPFH2msfc
+                  color: "#C8E6C9"
+                - text: Q 
+                  filename: SPFHsfc
+                  color: "#C8E6C9"
+                - text: TSkin
+                  filename: TMPsfcsfc
+                  color: "#C8E6C9"
+                - text: PRCP
+                  filename: APCPsfcs
+                  color: "#C8E6C9"
+                - text: C_PRCP  
+                  filename: ACPCPsfc
+                  color: "#C8E6C9"
+                - text: L_PRCP
+                  filename: NCPCPsfc
+                  color: "#C8E6C9"
+                - text: Runoff
+                  filename: WATRsfc
+                  color: "#C8E6C9"
+                - text: WEASD
+                  filename: WEASDsfc
+                  color: "#C8E6C9"
+                - text: SNOD
+                  filename: SNODsfc
+                  color: "#C8E6C9" 
+                - text: PWAT
+                  filename: PWATclm
+                  color: "#C8E6C9"
+                - text: CWAT
+                  filename: CWATclm 
+                  color: "#C8E6C9"         
+                - text: CRAIN
+                  filename: CRAINsfc  
+                  color: "#C8E6C9"                               
+                - text: CSNOW
+                  filename: CSNOWsfc
+                  color: "#C8E6C9"
+                - text: CICEP
+                  filename: CIECPsfc
+                  color: "#C8E6C9"
+                - text: CFRZR
+                  filename: CFRZRsfc
+                  color: "#C8E6C9"
+                - text: PSL
+                  filename: PRMSLmsl
+                  color: "#C8E6C9"
+                - text: PSL_eta
+                  filename: MSLETmsl
+                  color: "#C8E6C9"
+                - text: Psfc
+                  filename: PRESsfc
+                  color: "#C8E6C9"
+                - text: LFTX 
+                  filename: LFTXsfc
+                  color: "#C8E6C9"
+                - text: BestLFTX
+                  filename: no4LFTXsfc
+                  color: "#C8E6C9"
+                - text: CAPE
+                  filename: CAPEsfc
+                  color: "#C8E6C9"
+                - text: CIN
+                  filename: CINsfc
+                  color: "#C8E6C9"
+                - text: CWROK
+                  filename: CWROKclm
+                  color: "#C8E6C9"                     
+                - text: O3
+                  filename: TOZNEclm
+                  color: "#C8E6C9"
+                - text: VIS
+                  filename: VISsfc 
+                  color: "#C8E6C9"         
+                - text: VRATE
+                  filename: VRATEpbl
+                  color: "#C8E6C9"                               
+                - text: Sfc HGT 
+                  filename: HGTsfc
+                  color: "#C8E6C9"
+                - text: HGThgfl
+                  filename: HGThgfl
+                  color: "#C8E6C9"
+                - text: Heat Idx
+                  filename: HINDEXsfc
+                  color: "#C8E6C9"
+                - text: PBL HGT
+                  filename: HPBLsfc
+                  color: "#C8E6C9"
+                - text: Ice frc
+                  filename: ICECsfc
+                  color: "#C8E6C9"
+                - text: Ice dpt
+                  filename: IECDKfcs
+                  color: "#C8E6C9"
+                - text: U GWD  
+                  filename: UGWDsfc
+                  color: "#E1BEE7"
+                - text: V GWD
+                  filename: VGWDsfc
+                  color: "#E1BEE7"
+                - text: U STS
+                  filename: SFLXsfc
+                  color: "#E1BEE7"
+                - text: V STS
+                  filename: VFLXsfc
+                  color: "#E1BEE7"
+                - text: U10m
+                  filename: UGRD10m
+                  color: "#E1BEE7" 
+                - text: V10m
+                  filename: VGRD10m
+                  color: "#E1BEE7"
+                - text: Upbl
+                  filename: UGRDpbl 
+                  color: "#E1BEE7"         
+                - text: Vpbl
+                  filename: VGRDpbl  
+                  color: "#E1BEE7"                               
+                - text: FRICV
+                  filename: FRICVsfc
+                  color: "#E1BEE7"
+                - text: GUST
+                  filename: GUSTsfc
+                  color: "#E1BEE7"
+                - text: Dn LW
+                  filename: DLWRFsfc
+                  color: "#FFF9C4"
+                - text: Up LW
+                  filename: ULWRFsfc
+                  color: "#FFF9C4"
+                - text: OLR
+                  filename: ULWRFtoa
+                  color: "#FFF9C4"
+                - text: Dn SW
+                  filename: DSWRFsfc
+                  color: "#FFF9C4"
+                - text: Up SW
+                  filename: USWRFsfc
+                  color: "#FFF9C4"
+                - text: TOA SW
+                  filename: USWRFtoa
+                  color: "#FFF9C4"
+                - text: ALBDO
+                  filename: ALBDOsfc
+                  color: "#FFF9C4"
+                - text: Gnd FLUX
+                  filename: GFLUXsfc
+                  color: "#FFF9C4" 
+        D3:
+            src_template: 
+                - 2D/d4/{parameter}_gb.png  
+            cols_per_table: 10                                   
+            parameter:
+                - text: T2m
+                  filename: TMP2msfc
+                  color: "#C8E6C9"
+                - text: T2mMax
+                  filename: TMAX2msfc 
+                  color: "#C8E6C9"         
+                - text: T2mMin
+                  filename: TMIN2msfc  
+                  color: "#C8E6C9"                               
+                - text: DPT2m 
+                  filename: DPT2msfc
+                  color: "#C8E6C9"
+                - text: RH2m
+                  filename: RH2msfc
+                  color: "#C8E6C9"
+                - text: Q2m
+                  filename: SPFH2msfc
+                  color: "#C8E6C9"
+                - text: Q 
+                  filename: SPFHsfc
+                  color: "#C8E6C9"
+                - text: TSkin
+                  filename: TMPsfcsfc
+                  color: "#C8E6C9"
+                - text: PRCP
+                  filename: APCPsfcs
+                  color: "#C8E6C9"
+                - text: C_PRCP  
+                  filename: ACPCPsfc
+                  color: "#C8E6C9"
+                - text: L_PRCP
+                  filename: NCPCPsfc
+                  color: "#C8E6C9"
+                - text: Runoff
+                  filename: WATRsfc
+                  color: "#C8E6C9"
+                - text: WEASD
+                  filename: WEASDsfc
+                  color: "#C8E6C9"
+                - text: SNOD
+                  filename: SNODsfc
+                  color: "#C8E6C9" 
+                - text: PWAT
+                  filename: PWATclm
+                  color: "#C8E6C9"
+                - text: CWAT
+                  filename: CWATclm 
+                  color: "#C8E6C9"         
+                - text: CRAIN
+                  filename: CRAINsfc  
+                  color: "#C8E6C9"                               
+                - text: CSNOW
+                  filename: CSNOWsfc
+                  color: "#C8E6C9"
+                - text: CICEP
+                  filename: CIECPsfc
+                  color: "#C8E6C9"
+                - text: CFRZR
+                  filename: CFRZRsfc
+                  color: "#C8E6C9"
+                - text: PSL
+                  filename: PRMSLmsl
+                  color: "#C8E6C9"
+                - text: PSL_eta
+                  filename: MSLETmsl
+                  color: "#C8E6C9"
+                - text: Psfc
+                  filename: PRESsfc
+                  color: "#C8E6C9"
+                - text: LFTX 
+                  filename: LFTXsfc
+                  color: "#C8E6C9"
+                - text: BestLFTX
+                  filename: no4LFTXsfc
+                  color: "#C8E6C9"
+                - text: CAPE
+                  filename: CAPEsfc
+                  color: "#C8E6C9"
+                - text: CIN
+                  filename: CINsfc
+                  color: "#C8E6C9"
+                - text: CWROK
+                  filename: CWROKclm
+                  color: "#C8E6C9"                     
+                - text: O3
+                  filename: TOZNEclm
+                  color: "#C8E6C9"
+                - text: VIS
+                  filename: VISsfc 
+                  color: "#C8E6C9"         
+                - text: VRATE
+                  filename: VRATEpbl
+                  color: "#C8E6C9"                               
+                - text: Sfc HGT 
+                  filename: HGTsfc
+                  color: "#C8E6C9"
+                - text: HGThgfl
+                  filename: HGThgfl
+                  color: "#C8E6C9"
+                - text: Heat Idx
+                  filename: HINDEXsfc
+                  color: "#C8E6C9"
+                - text: PBL HGT
+                  filename: HPBLsfc
+                  color: "#C8E6C9"
+                - text: Ice frc
+                  filename: ICECsfc
+                  color: "#C8E6C9"
+                - text: Ice dpt
+                  filename: IECDKfcs
+                  color: "#C8E6C9"
+                - text: U GWD  
+                  filename: UGWDsfc
+                  color: "#E1BEE7"
+                - text: V GWD
+                  filename: VGWDsfc
+                  color: "#E1BEE7"
+                - text: U STS
+                  filename: SFLXsfc
+                  color: "#E1BEE7"
+                - text: V STS
+                  filename: VFLXsfc
+                  color: "#E1BEE7"
+                - text: U10m
+                  filename: UGRD10m
+                  color: "#E1BEE7" 
+                - text: V10m
+                  filename: VGRD10m
+                  color: "#E1BEE7"
+                - text: Upbl
+                  filename: UGRDpbl 
+                  color: "#E1BEE7"         
+                - text: Vpbl
+                  filename: VGRDpbl  
+                  color: "#E1BEE7"                               
+                - text: FRICV
+                  filename: FRICVsfc
+                  color: "#E1BEE7"
+                - text: GUST
+                  filename: GUSTsfc
+                  color: "#E1BEE7"
+                - text: Dn LW
+                  filename: DLWRFsfc
+                  color: "#FFF9C4"
+                - text: Up LW
+                  filename: ULWRFsfc
+                  color: "#FFF9C4"
+                - text: OLR
+                  filename: ULWRFtoa
+                  color: "#FFF9C4"
+                - text: Dn SW
+                  filename: DSWRFsfc
+                  color: "#FFF9C4"
+                - text: Up SW
+                  filename: USWRFsfc
+                  color: "#FFF9C4"
+                - text: TOA SW
+                  filename: USWRFtoa
+                  color: "#FFF9C4"
+                - text: ALBDO
+                  filename: ALBDOsfc
+                  color: "#FFF9C4"
+                - text: Gnd FLUX
+                  filename: GFLUXsfc
+                  color: "#FFF9C4"
+    SelectEnsemble:
+        u250:
+            title: "Ensemble Verification Score."
+            src_template: 
+                - ENS_VRFY/{parameter}{variables}_{row}.gif 
+            
+            rows_per_table: 11
+            row:
+                - text: BSS/RPSS
+                  filename: bss
+                  filename_second: rpss
+                  colspan: 1
+                - text: CRPS/CRPSS
+                  filename: crp
+                  filename_second: crps
+                  colspan: 1
+                - text: ROC
+                  filename: roc
+                  colspan: 1
+                - text: HIS
+                  filename: his
+                  colspan: 1
+                - text: RMS
+                  filename: rms
+                  colspan: 1    
+                - text: ERR
+                  filename: err 
+                  colspan: 1 
+                - text: AC 
+                  filename: pac
+                  colspan: 1
+                - text: EVAL
+                  filename: eval
+                  colspan: 1 
+            parameter:
+                - text: North Hemisphere(20N-80N)
+                  filename: nh 
+                - text: Tropical(20S-20N)
+                  filename: tr
+                - text: South Hemisphere(20S-80S)
+                  filename: sh
+                - text: East Asia(5S-55N,60E-180E)
+                  filename: ea   
+        v250:
+            title: "Ensemble Verification Score."
+            src_template: 
+                - ENS_VRFY/{parameter}{variables}_{row}.gif   
+            rows_per_table: 11
+            row:
+                - text: BSS/RPSS
+                  filename: bss
+                  filename_second: rpss
+                  colspan: 1
+                - text: CRPS/CRPSS
+                  filename: crp
+                  filename_second: crps
+                  colspan: 1
+                - text: ROC
+                  filename: roc
+                  colspan: 1
+                - text: HIS
+                  filename: his
+                  colspan: 1
+                - text: RMS
+                  filename: rms
+                  colspan: 1    
+                - text: ERR
+                  filename: err 
+                  colspan: 1 
+                - text: AC 
+                  filename: pac
+                  colspan: 1
+                - text: EVAL
+                  filename: eval
+                  colspan: 1                              
+            parameter:
+                - text: North Hemisphere(20N-80N)
+                  filename: nh 
+                - text: Tropical(20S-20N)
+                  filename: tr           
+                - text: South Hemisphere(20S-80S)
+                  filename: sh                                 
+                - text: East Asia(5S-55N,60E-180E)
+                  filename: ea  
+        z500:
+          title: "Ensemble Verification Score."
+          src_template: 
+            - ENS_VRFY/{parameter}{variables}_{row}.gif  
+          rows_per_table: 11
+          row:
+              - text: BSS/RPSS
+                filename: bss
+                filename_second: rpss
+                colspan: 1
+              - text: CRPS/CRPSS
+                filename: crp
+                filename_second: crps
+                colspan: 1
+              - text: ROC
+                filename: roc
+                colspan: 1
+              - text: HIS
+                filename: his
+                colspan: 1
+              - text: RMS
+                filename: rms
+                colspan: 1    
+              - text: ERR
+                filename: err 
+                colspan: 1 
+              - text: AC 
+                filename: pac
+                colspan: 1
+              - text: EVAL
+                filename: eval
+                colspan: 1                             
+          parameter:
+              - text: North Hemisphere(20N-80N)
+                filename: nh 
+              - text: Tropical(20S-20N)
+                filename: tr           
+              - text: South Hemisphere(20S-80S)
+                filename: sh                                 
+              - text: East Asia(5S-55N,60E-180E)
+                filename: ea
+        v850:
+            title: "Ensemble Verification Score."
+            src_template: 
+                - ENS_VRFY/{parameter}{variables}_{row}.gif  
+            rows_per_table: 11
+            row:
+                - text: BSS/RPSS
+                  filename: bss
+                  filename_second: rpss
+                  colspan: 1
+                - text: CRPS/CRPSS
+                  filename: crp
+                  filename_second: crps
+                  colspan: 1
+                - text: ROC
+                  filename: roc
+                  colspan: 1
+                - text: HIS
+                  filename: his
+                  colspan: 1
+                - text: RMS
+                  filename: rms
+                  colspan: 1    
+                - text: ERR
+                  filename: err 
+                  colspan: 1 
+                - text: AC 
+                  filename: pac
+                  colspan: 1
+                - text: EVAL
+                  filename: eval
+                  colspan: 1                          
+            parameter:
+                - text: North Hemisphere(20N-80N)
+                  filename: nh 
+                - text: Tropical(20S-20N)
+                  filename: tr           
+                - text: South Hemisphere(20S-80S)
+                  filename: sh                                 
+                - text: East Asia(5S-55N,60E-180E)
+                  filename: ea 
+        u850:
+            title: "Ensemble Verification Score."
+            src_template: 
+                - ENS_VRFY/{parameter}{variables}_{row}.gif  
+            rows_per_table: 11
+            row:
+                - text: BSS/RPSS
+                  filename: bss
+                  filename_second: rpss
+                  colspan: 1
+                - text: CRPS/CRPSS
+                  filename: crp
+                  filename_second: crps
+                  colspan: 1
+                - text: ROC
+                  filename: roc
+                  colspan: 1
+                - text: HIS
+                  filename: his
+                  colspan: 1
+                - text: RMS
+                  filename: rms
+                  colspan: 1    
+                - text: ERR
+                  filename: err 
+                  colspan: 1 
+                - text: AC 
+                  filename: pac
+                  colspan: 1
+                - text: EVAL
+                  filename: eval
+                  colspan: 1                              
+            parameter:
+                - text: North Hemisphere(20N-80N)
+                  filename: nh 
+                - text: Tropical(20S-20N)
+                  filename: tr           
+                - text: South Hemisphere(20S-80S)
+                  filename: sh                                 
+                - text: East Asia(5S-55N,60E-180E)
+                  filename: ea
+        t850:
+            title: "Ensemble Verification Score."
+            src_template: 
+                - ENS_VRFY/{parameter}{variables}_{row}.gif 
+            rows_per_table: 11
+            row:
+                - text: BSS/RPSS
+                  filename: bss
+                  filename_second: rpss
+                  colspan: 1
+                - text: CRPS/CRPSS
+                  filename: crp
+                  filename_second: crps
+                  colspan: 1
+                - text: ROC
+                  filename: roc
+                  colspan: 1
+                - text: HIS
+                  filename: his
+                  colspan: 1
+                - text: RMS
+                  filename: rms
+                  colspan: 1    
+                - text: ERR
+                  filename: err 
+                  colspan: 1 
+                - text: AC 
+                  filename: pac
+                  colspan: 1
+                - text: EVAL
+                  filename: eval
+                  colspan: 1                               
+            parameter:
+                - text: North Hemisphere(20N-80N)
+                  filename: nh 
+                - text: Tropical(20S-20N)
+                  filename: tr           
+                - text: South Hemisphere(20S-80S)
+                  filename: sh
+                - text: East Asia(5S-55N,60E-180E)
+                  filename: ea
+        z1000:
+            title: "Ensemble Verification Score."
+            src_template: 
+                - ENS_VRFY/{parameter}{variables}_{row}.gif 
+            rows_per_table: 11
+            row:
+                - text: BSS/RPSS
+                  filename: bss
+                  filename_second: rpss
+                  colspan: 1
+                - text: CRPS/CRPSS
+                  filename: crp
+                  filename_second: crps
+                  colspan: 1
+                - text: ROC
+                  filename: roc
+                  colspan: 1
+                - text: HIS
+                  filename: his
+                  colspan: 1
+                - text: RMS
+                  filename: rms
+                  colspan: 1    
+                - text: ERR
+                  filename: err 
+                  colspan: 1 
+                - text: AC 
+                  filename: pac
+                  colspan: 1
+                - text: EVAL
+                  filename: eval
+                  colspan: 1
+            parameter:
+                - text: North Hemisphere(20N-80N)
+                  filename: nh 
+                - text: Tropical(20S-20N)
+                  filename: tr           
+                - text: South Hemisphere(20S-80S)
+                  filename: sh
+                - text: East Asia(5S-55N,60E-180E)
+                  filename: ea
+        u10m:
+            title: "Ensemble Verification Score."
+            src_template: 
+                - ENS_VRFY/{parameter}{variables}_{row}.gif   
+            rows_per_table: 11
+            row:
+                - text: BSS/RPSS
+                  filename: bss
+                  filename_second: rpss
+                  colspan: 1
+                - text: CRPS/CRPSS
+                  filename: crp
+                  filename_second: crps
+                  colspan: 1
+                - text: ROC
+                  filename: roc
+                  colspan: 1
+                - text: HIS
+                  filename: his
+                  colspan: 1
+                - text: RMS
+                  filename: rms
+                  colspan: 1    
+                - text: ERR
+                  filename: err 
+                  colspan: 1 
+                - text: AC 
+                  filename: pac
+                  colspan: 1
+                - text: EVAL
+                  filename: eval
+                  colspan: 1 
+            parameter:
+                - text: North Hemisphere(20N-80N)
+                  filename: nh 
+                - text: Tropical(20S-20N)
+                  filename: tr 
+                - text: South Hemisphere(20S-80S)
+                  filename: sh
+                - text: East Asia(5S-55N,60E-180E)
+                  filename: ea
+        v10m:
+            title: "Ensemble Verification Score."
+            src_template: 
+                - ENS_VRFY/{parameter}{variables}_{row}.png  
+            rows_per_table: 11
+            row:
+                - text: BSS/RPSS
+                  filename: bss
+                  filename_second: rpss
+                  colspan: 1
+                - text: CRPS/CRPSS
+                  filename: crp
+                  filename_second: crps
+                  colspan: 1
+                - text: ROC
+                  filename: roc
+                  colspan: 1
+                - text: HIS
+                  filename: his
+                  colspan: 1
+                - text: RMS
+                  filename: rms
+                  colspan: 1    
+                - text: ERR
+                  filename: err 
+                  colspan: 1 
+                - text: AC 
+                  filename: pac
+                  colspan: 1
+                - text: EVAL
+                  filename: eval
+                  colspan: 1
+            parameter:
+                - text: North Hemisphere(20N-80N)
+                  filename: nh 
+                - text: Tropical(20S-20N)
+                  filename: tr           
+                - text: South Hemisphere(20S-80S)
+                  filename: sh
+                - text: East Asia(5S-55N,60E-180E)
+                  filename: ea
+        t2m:
+            title: "Ensemble Verification Score."
+            src_template: 
+                - ENS_VRFY/{parameter}{variables}_{row}.gif  
+            rows_per_table: 11
+            row:
+                - text: BSS/RPSS
+                  filename: bss
+                  filename_second: rpss
+                  colspan: 1
+                - text: CRPS/CRPSS
+                  filename: crp
+                  filename_second: crps
+                  colspan: 1
+                - text: ROC
+                  filename: roc
+                  colspan: 1
+                - text: HIS
+                  filename: his
+                  colspan: 1
+                - text: RMS
+                  filename: rms
+                  colspan: 1    
+                - text: ERR
+                  filename: err 
+                  colspan: 1 
+                - text: AC 
+                  filename: pac
+                  colspan: 1
+                - text: EVAL
+                  filename: eval
+                  colspan: 1
+            parameter:
+                - text: North Hemisphere(20N-80N)
+                  filename: nh 
+                - text: Tropical(20S-20N)
+                  filename: tr 
+                - text: South Hemisphere(20S-80S)
+                  filename: sh
+                - text: East Asia(5S-55N,60E-180E)
+                  filename: ea
+    SelectEnsembleRainfall:
+        CRPS/RMSE/MERR:
+            title: "Ensemble Verification Score."
+            src_template: 
+                - ENS_VRFY/PCP_{parameter}_CRPS.gif 
+                - ENS_VRFY/PCP_{parameter}_RMSE.gif
+                - ENS_VRFY/PCP_{parameter}_MERR.gif 
+            parameter:
+                - text: North Hemisphere(20N-80N)
+                  filename: NHX
+                  filename_2nd: NHX
+                  filename_3rd: NHX
+                - text: Tropical(20S-20N)
+                  filename: TRO
+                  filename_2nd: TRO 
+                  filename_3rd: TRO
+                - text: South Hemisphere(20S-80S)
+                  filename: SHX
+                  filename_2nd: SHX
+                  filename_3rd: SHX
+                - text: East Asia(5S-55N,60E-180E)
+                  filename: ASI
+                  filename_2nd: ASI
+                  filename_3rd: ASI
+                - text: COUNS(20N-75N,40W-0W)
+                  filename: PNA
+                  filename_2nd: PNA
+                  filename_3rd: PNA
+                - text: Taiwan Region(15N-30N,110E-130E)
+                  filename: TWD
+                  filename_2nd: TWD
+                  filename_3rd: TWD
+
+        ETS/Brier/ETSSKILL:
+            title: "Ensemble Verification Score."
+            src_template: 
+                - ENS_VRFY/PCP_{parameter}_ETS_{row}.gif
+                - ENS_VRFY/PCP_{parameter}_Brier_{row}.gif  
+                - ENS_VRFY/PCP_{parameter}_ETSSKILL_{row}.gif  
+            rows_per_table: 11
+            row:
+                - text: threadhold > 1.0
+                  filename: '1.00'
+                  filename_2nd: '1.00'
+                  filename_3rd: '1.00'
+                  colspan: 1
+                - text: threadhold > 2.0
+                  filename: '2.00'
+                  filename_2nd: '2.00'
+                  filename_3rd: '2.00'
+                  colspan: 1
+                - text: threadhold > 5.0
+                  filename: '5.00'
+                  filename_2nd: '5.00'
+                  filename_3rd: '5.00'
+                  colspan: 1
+                - text: threadhold > 10.0
+                  filename: '10.0'
+                  filename_2nd: '10.0'
+                  filename_3rd: '10.0'
+                  colspan: 1
+                - text: threadhold > 20.0
+                  filename: '20.0'
+                  filename_2nd: '20.0'
+                  filename_3rd: '20.0'
+                  colspan: 1
+            parameter:
+                - text: North Hemisphere(20N-80N)
+                  filename: NHX
+                - text: Tropical(20S-20N)
+                  filename: TRO
+                - text: South Hemisphere(20S-80S)
+                  filename: SHX
+                - text: East Asia(5S-55N,60E-180E)
+                  filename: ASI
+                - text: COUNS(20N-75N,40W-0W)
+                  filename: PNA
+                - text: Taiwan Region(15N-30N,110E-130E)
+                  filename: TWD
+        reli:
+            title: "Ensemble Verification Score."
+            src_template: 
+                - ENS_VRFY/PCP_{parameter}_RELI_{row}{day}.gif
+            rows_per_table: 11
+            row:
+                - text: threadhold > 1.0
+                  filename: "1.00"
+                  colspan: 1
+                - text: threadhold > 2.0
+                  filename: "2.00"
+                  colspan: 1
+                - text: threadhold > 5.0
+                  filename: "5.00"
+                  colspan: 1
+                - text: threadhold > 10.0
+                  filename: "10.00"
+                  colspan: 1
+                - text: threadhold > 20.0
+                  filename: "20.00"
+                  colspan: 1
+            parameter:
+                - text: North Hemisphere(20N-80N)
+                  filename: NHX
+                - text: Tropical(20S-20N)
+                  filename: TRO
+                - text: South Hemisphere(20S-80S)
+                  filename: SHX
+                - text: East Asia(5S-55N,60E-180E)
+                  filename: ea
+                - text: COUNS(20N-75N,40W-0W)
+                  filename: couns
+                - text: Taiwan Region(15N-30N,110E-130E)
+                  filename: TWD
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 2
+                  filename: _day2
+                - text: 3
+                  filename: _day3
+                - text: 4 
+                  filename: _day4 
+                - text: 5 
+                  filename: _day5 
+                - text: 6 
+                  filename: _day6
+                - text: 7
+                  filename: _day7
+                - text: 8
+                  filename: _day8
+                - text: 9 
+                  filename: _day9 
+                - text: 10 
+                  filename: _day10 
+                - text: 11 
+                  filename: _day11
+                - text: 12 
+                  filename: _day12 
+                - text: 13 
+                  filename: _day13 
+                - text: 14 
+                  filename: _day14 
+                - text: 15 
+                  filename: _day15 
+                - text: 16 
+                  filename: _day16
+    SelectAnomalyCorrelation:
+        Height:
+            title: "Anomaly Correlation of Geopotential Height"
+            src_template: 
+                - allmodel/daily/{folder_name}/{day}_HGT_P{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: 1000
+                - text: 700 hPa
+                  filename: 700
+                - text: 500 hPa
+                  filename: 500
+                - text: 250 hPa
+                  filename: 250
+            day:
+                - text: 1
+                  filename: cor_day1 
+                  folder_name: cor
+                - text: 3
+                  filename: cor_day3  
+                  folder_name: cor
+                - text: 5 
+                  filename: cor_day5 
+                  folder_name: cor
+                - text: 6 
+                  filename: cor_day6
+                  folder_name: cor
+                - text: 8
+                  filename: cor_day8
+                  folder_name: cor
+                - text: 10 
+                  filename: cor_day10
+                  folder_name: cor
+                - text: Dieoff 
+                  filename: cordieoff
+                  folder_name: dieoff
+                - text: Map
+                  filename: cordiff
+                  folder_name: cor 
+        Humidity:
+            title: "Anomaly Correlation of Humidity"
+            src_template: 
+                - allmodel/daily/{folder_name}/{day}_RH_P{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: 1000
+                - text: 700 hPa
+                  filename: 700
+                - text: 500 hPa
+                  filename: 500
+                - text: 250 hPa
+                  filename: 250
+            day:
+                - text: 1
+                  filename: cor_day1 
+                  folder_name: cor
+                - text: 3
+                  filename: cor_day3  
+                  folder_name: cor
+                - text: 5 
+                  filename: cor_day5 
+                  folder_name: cor
+                - text: 6 
+                  filename: cor_day6
+                  folder_name: cor
+                - text: 8
+                  filename: cor_day8
+                  folder_name: cor
+                - text: 10 
+                  filename: cor_day10
+                  folder_name: cor
+                - text: Dieoff 
+                  filename: cordieoff
+                  folder_name: dieoff
+                - text: Map
+                  filename: cordiff
+                  folder_name: cor 
+        VectorWind:
+            title: "Anomaly Correlation of Vector Wind"
+            src_template: 
+                - allmodel/daily/{folder_name}/{day}_WIND_P{height}_{location}.png 
+            height:
+                - text: 850 hPa
+                  filename: 850
+                - text: 500 hPa
+                  filename: 500
+                - text: 250 hPa
+                  filename: 250
+            day:
+                - text: 1
+                  filename: cor_day1 
+                  folder_name: cor
+                - text: 2
+                  filename: cor_day2
+                  folder_name: cor
+                - text: 3
+                  filename: cor_day3  
+                  folder_name: cor
+                - text: 4 
+                  filename: cor_day4
+                  folder_name: cor
+                - text: 5 
+                  filename: cor_day5
+                  folder_name: cor
+                - text: 6
+                  filename: cor_day6
+                  folder_name: cor
+                - text: 7 
+                  filename: cor_day7
+                  folder_name: cor  
+                - text: 8
+                  filename: cor_day8
+                  folder_name: cor
+                - text: Dieoff 
+                  filename: cordieoff
+                  folder_name: dieoff
+                - text: Map
+                  filename: cordiff
+                  folder_name: cor
+        ZonalWind:
+            title: "Anomaly Correlation of Zonal Wind"
+            src_template: 
+                - allmodel/daily/{folder_name}/{day}_U_P{height}_{location}.png 
+            height:
+                - text: 850 hPa
+                  filename: 850
+                - text: 500 hPa
+                  filename: 500
+                - text: 250 hPa
+                  filename: 250
+            day:
+                - text: 1
+                  filename: cor_day1 
+                  folder_name: cor
+                - text: 3
+                  filename: cor_day3  
+                  folder_name: cor
+                - text: 5 
+                  filename: cor_day5 
+                  folder_name: cor
+                - text: 6 
+                  filename: cor_day6
+                  folder_name: cor
+                - text: 8
+                  filename: cor_day8
+                  folder_name: cor
+                - text: 10 
+                  filename: cor_day10
+                  folder_name: cor
+                - text: Dieoff 
+                  filename: cordieoff
+                  folder_name: dieoff
+                - text: Map
+                  filename: cordiff
+                  folder_name: cor 
+        MeridionalWind:
+            title: "Anomaly Correlation of Meridional Wind"
+            src_template: 
+                - allmodel/daily/{folder_name}/{day}_V_P{height}_{location}.png 
+            height:
+                - text: 850 hPa
+                  filename: 850
+                - text: 500 hPa
+                  filename: 500
+                - text: 250 hPa
+                  filename: 250
+            day:
+                - text: 1
+                  filename: cor_day1 
+                  folder_name: cor
+                - text: 3
+                  filename: cor_day3  
+                  folder_name: cor 
+                - text: 5 
+                  filename: cor_day5 
+                  folder_name: cor
+                - text: 6 
+                  filename: cor_day6
+                  folder_name: cor
+                - text: 8
+                  filename: cor_day8
+                  folder_name: cor
+                - text: 10 
+                  filename: cor_day10
+                  folder_name: cor
+                - text: Dieoff 
+                  filename: cordieoff
+                  folder_name: dieoff
+                - text: Map
+                  filename: cordiff
+                  folder_name: cor
+        Temperature:
+            title: "Anomaly Correlation of Temperature"
+            src_template: 
+                - allmodel/daily/{folder_name}/{day}_T_P{height}_{location}.png 
+            height:
+                - text: 850 hPa
+                  filename: 850
+                - text: 500 hPa
+                  filename: 500
+                - text: 250 hPa
+                  filename: 250
+            day:
+                - text: 1
+                  filename: cor_day1 
+                  folder_name: cor
+                - text: 3
+                  filename: cor_day3  
+                  folder_name: cor
+                - text: 5 
+                  filename: cor_day5 
+                  folder_name: cor
+                - text: 6 
+                  filename: cor_day6
+                  folder_name: cor
+                - text: 8
+                  filename: cor_day8
+                  folder_name: cor
+                - text: 10 
+                  filename: cor_day10
+                  folder_name: cor
+                - text: Dieoff 
+                  filename: cordieoff
+                  folder_name: dieoff 
+                - text: Map
+                  filename: cordiff
+                  folder_name: cor  
+        SLP:
+            title: "Anomaly Correlation of Sea-Level Pressure"
+            src_template: 
+                - allmodel/daily/{folder_name}/{day}_PMSL_{height}_{location}.png 
+            height:
+                - text: Sea Level
+                  filename: MSL
+            day:
+                - text: 1
+                  filename: cor_day1 
+                  folder_name: cor
+                - text: 3
+                  filename: cor_day3  
+                  folder_name: cor 
+                - text: 5 
+                  filename: cor_day5 
+                  folder_name: cor 
+                - text: 6 
+                  filename: cor_day6
+                  folder_name: cor
+                - text: 8
+                  filename: cor_day8
+                  folder_name: cor
+                - text: 10 
+                  filename: cor_day10
+                  folder_name: cor 
+                - text: Dieoff 
+                  filename: cordieoff
+                  folder_name: dieoff 
+                - text: Map
+                  filename: cordiff
+                  folder_name: cor 
+    SelectBias:
+        Height:
+            title: "Bias of Geopotential Height (m) Forecasts"
+            src_template: 
+                - allmodel/daily/bias/bias{day}_HGT{height}_{location}.png 
+            height:              
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3
+                - text: 5 
+                  filename: _day5 
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10 
+                - text: Mean 
+                  filename: dieoff
+        Humidity:
+            title: "Bias of Humidity (%) Forecasts"
+            src_template: 
+                - allmodel/daily/bias/bias{day}_RH{height}_{location}.png 
+            height:              
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3
+                - text: 5 
+                  filename: _day5
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10 
+                - text: Mean 
+                  filename: dieoff 
+        WindSpeed:
+            title: "Bias of Vector Wind (m/s)"
+            src_template: 
+                - allmodel/daily/bias/bias{day}_WIND{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850" 
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3   
+                - text: 5 
+                  filename: _day5   
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff                   
+        ZonalWind:
+            title: "Bias of Zonal Wind (m/s)"
+            src_template: 
+                - allmodel/daily/bias/bias{day}_U{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3 
+                - text: 5 
+                  filename: _day5 
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10 
+                - text: Mean 
+                  filename: dieoff  
+        MeridionalWind:
+            title: "Bias of Meridional Wind (m/s)"
+            src_template: 
+                - allmodel/daily/bias/bias{day}_V{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff        
+        Temperature:
+            title: "Bias of Temperature (K)"
+            src_template: 
+                - allmodel/daily/bias/bias{day}_T{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff   
+        O3:
+            title: "Bias of Ozone Mixing Ratio (ppmg)"
+            src_template: 
+                - allmodel/daily/bias/bias{day}_O3{height}_{location}.png 
+            height:
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 70 hPa
+                  filename: "_P70"                   
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 30 hPa
+                  filename: "_P30"                  
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""  
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3 
+                - text: 5 
+                  filename: _day5   
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10 
+                - text: Mean 
+                  filename: dieoff 
+    SelectRMSE:
+        Height:
+            title: "RMS Error of Geopotential Height (m) Forecasts"
+            src_template: 
+                - allmodel/daily/rms/rms{day}_HGT{height}_{location}.png 
+            height:              
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                                                                                                         
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff       
+        Humidity:
+            title: "RMS Error of Humidity (%) Forecasts"
+            src_template: 
+                - allmodel/daily/rms/rms{day}_RH{height}_{location}.png 
+            height:              
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                                                                                                         
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff                 
+        VectorWind:
+            title: "RMS Error of Vector Wind (m/s)"
+            src_template: 
+                - allmodel/daily/rms/rms{day}_WIND{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff                   
+        ZonalWind:
+            title: "Bias of Zonal Wind (m/s)"
+            src_template: 
+                - allmodel/daily/rms/rms{day}_U{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff  
+        MeridionalWind:
+            title: "Bias of Meridional Wind (m/s)"
+            src_template: 
+                - allmodel/daily/rms/rms{day}_V{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff        
+        Temperature:
+            title: "Bias of Temperature (K)"
+            src_template: 
+                - allmodel/daily/rms/rms{day}_T{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff   
+        O3:
+            title: "Bias of Ozone Mixing Ratio (ppmg)"
+            src_template: 
+                - allmodel/daily/rms/rms{day}_O3{height}_{location}.png 
+            height:
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 70 hPa
+                  filename: "_P70"                   
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 30 hPa
+                  filename: "_P30"                  
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff  
+    SelectMSESS:
+        Height:
+            title: "Murphy's Mean-Squared Error Skill Score: Geopotential Height (m) Forecasts"
+            src_template: 
+                - allmodel/daily/msess/msess{day}_HGT{height}_{location}.png 
+            height:              
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                                                                                                         
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff     
+        Humidity:
+            title: "Murphy's Mean-Squared Error Skill Score: Humidity (%) Forecasts"
+            src_template: 
+                - allmodel/daily/msess/msess{day}_RH{height}_{location}.png 
+            height:              
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                                                                                                         
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff                  
+        VectorWind:
+            title: "Murphy's Mean-Squared Error Skill Score: Vector Wind (m/s)"
+            src_template: 
+                - allmodel/daily/msess/msess{day}_WIND{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff                   
+        ZonalWind:
+            title: "Murphy's Mean-Squared Error Skill Score: Zonal Wind (m/s)"
+            src_template: 
+                - allmodel/daily/msess/msess{day}_U{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff  
+        MeridionalWind:
+            title: "Murphy's Mean-Squared Error Skill Score: Meridional Wind (m/s)"
+            src_template: 
+                - allmodel/daily/msess/msess{day}_V{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff        
+        Temperature:
+            title: "Murphy's Mean-Squared Error Skill Score: Temperature (K)"
+            src_template: 
+                - allmodel/daily/msess/msess{day}_T{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff   
+        O3:
+            title: "Murphy's Mean-Squared Error Skill Score: Ozone Mixing Ratio (ppmg)"
+            src_template: 
+                - allmodel/daily/msess/msess{day}_O3{height}_{location}.png 
+            height:
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 70 hPa
+                  filename: "_P70"                   
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 30 hPa
+                  filename: "_P30"                  
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff         
+    SelectRSD:
+        Height:
+            title: "Ratio of Standard Deviation between Forecast and Analysis: Geopotential Height (m) Forecasts"
+            src_template: 
+                - allmodel/daily/rsd/rsd{day}_HGT{height}_{location}.png 
+            height:              
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                                                                                                         
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff     
+        Humidity:
+            title: "Ratio of Standard Deviation between Forecast and Analysis: Humidity (%) Forecasts"
+            src_template: 
+                - allmodel/daily/rsd/rsd{day}_RH{height}_{location}.png 
+            height:              
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                                                                                                         
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff              
+        VectorWind:
+            title: "Ratio of Standard Deviation between Forecast and Analysis: Vector Wind (m/s)"
+            src_template: 
+                - allmodel/daily/rsd/rsd{day}_WIND{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff                   
+        ZonalWind:
+            title: "Ratio of Standard Deviation between Forecast and Analysis: Zonal Wind (m/s)"
+            src_template: 
+                - allmodel/daily/rsd/rsd{day}_U{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff  
+        MeridionalWind:
+            title: "Ratio of Standard Deviation between Forecast and Analysis: Meridional Wind (m/s)"
+            src_template: 
+                - allmodel/daily/rsd/rsd{day}_V{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff        
+        Temperature:
+            title: "Ratio of Standard Deviation between Forecast and Analysis: Temperature (K)"
+            src_template: 
+                - allmodel/daily/rsd/rsd{day}_T{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff   
+        O3:
+            title: "Ratio of Standard Deviation between Forecast and Analysis: Ozone Mixing Ratio (ppmg)"
+            src_template: 
+                - allmodel/daily/rsd/rsd{day}_O3{height}_{location}.png 
+            height:
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 70 hPa
+                  filename: "_P70"                   
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 30 hPa
+                  filename: "_P30"                  
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff                                                                                                                            
+    SelectEMD:
+        Height:
+            title: "RMSE from Mean Difference: Geopotential Height (m) Forecasts"
+            src_template: 
+                - allmodel/daily/emd/emd{day}_HGT{height}_{location}.png 
+            height:              
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                                                                                                         
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff          
+        Humidity:
+            title: "RMSE from Mean Difference: Humidity (%) Forecasts"
+            src_template: 
+                - allmodel/daily/emd/emd{day}_RH{height}_{location}.png 
+            height:              
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                                                                                                         
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff            
+        VectorWind:
+            title: "RMSE from Mean Difference: Vector Wind (m/s)"
+            src_template: 
+                - allmodel/daily/emd/emd{day}_WIND{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff                   
+        ZonalWind:
+            title: "RMSE from Mean Difference: Zonal Wind (m/s)"
+            src_template: 
+                - allmodel/daily/emd/emd{day}_U{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff  
+        MeridionalWind:
+            title: "RMSE from Mean Difference: Meridional Wind (m/s)"
+            src_template: 
+                - allmodel/daily/emd/emd{day}_V{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff        
+        Temperature:
+            title: "RMSE from Mean Difference: Temperature (K)"
+            src_template: 
+                - allmodel/daily/emd/emd{day}_T{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff   
+        O3:
+            title: "RMSE from Mean Difference: Ozone Mixing Ratio (ppmg)"
+            src_template: 
+                - allmodel/daily/emd/emd{day}_O3{height}_{location}.png 
+            height:
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 70 hPa
+                  filename: "_P70"                   
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 30 hPa
+                  filename: "_P30"                  
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff  
+    SelectEPV:
+        Height:
+            title: "RMSE from Pattern Variation: Geopotential Height (m) Forecasts"
+            src_template: 
+                - allmodel/daily/epv/epv{day}_HGT{height}_{location}.png 
+            height:              
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                                                                                                         
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff              
+        Humidity:
+            title: "RMSE from Pattern Variation: Humidity (m) Forecasts"
+            src_template: 
+                - allmodel/daily/epv/epv{day}_RH{height}_{location}.png 
+            height:              
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                                                                                                         
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff            
+        VectorWind:
+            title: "RMSE from Pattern Variation: Vector Wind (m/s)"
+            src_template: 
+                - allmodel/daily/epv/epv{day}_WIND{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff                   
+        ZonalWind:
+            title: "RMSE from Pattern Variation: Zonal Wind (m/s)"
+            src_template: 
+                - allmodel/daily/epv/epv{day}_U{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff  
+        MeridionalWind:
+            title: "RMSE from Pattern Variation: Meridional Wind (m/s)"
+            src_template: 
+                - allmodel/daily/epv/epv{day}_V{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff        
+        Temperature:
+            title: "RMSE from Pattern Variation: Temperature (K)"
+            src_template: 
+                - allmodel/daily/epv/epv{day}_T{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3
+                - text: 5 
+                  filename: _day5
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff   
+        O3:
+            title: "RMSE from Pattern Variation:: ozone Mixing Ratio (ppmg)"
+            src_template: 
+                - allmodel/daily/epv/epv{day}_O3{height}_{location}.png 
+            height:
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 70 hPa
+                  filename: "_P70"                   
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 30 hPa
+                  filename: "_P30"                  
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff 
+    SelectPCOR:
+        Height:
+            title: "Anomalous Pattern Correlation of Geopotential Height (m) Forecasts"
+            src_template: 
+                - allmodel/daily/pcor/pcor{day}_HGT{height}_{location}.png 
+            height:              
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                                                                                                         
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff 
+        Humidity:
+            title: "Humidity (%) Forecasts"
+            src_template: 
+                - allmodel/daily/pcor/pcor{day}_RH{height}_{location}.png 
+            height:              
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                                                                                                         
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff                  
+        VectorWind:
+            title: "Anomalous Pattern Correlation of Vector Wind (m/s)"
+            src_template: 
+                - allmodel/daily/pcor/pcor{day}_WIND{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff                   
+        ZonalWind:
+            title: "Anomalous Pattern Correlation of Zonal Wind (m/s)"
+            src_template: 
+                - allmodel/daily/pcor/pcor{day}_U{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff  
+        MeridionalWind:
+            title: "Anomalous Pattern Correlation of Meridional Wind (m/s)"
+            src_template: 
+                - allmodel/daily/pcor/pcor{day}_V{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff        
+        Temperature:
+            title: "Anomalous Pattern Correlation of Temperature (K)"
+            src_template: 
+                - allmodel/daily/pcor/pcor{day}_T{height}_{location}.png 
+            height:
+                - text: 1000 hPa
+                  filename: "_P1000"
+                - text: 850 hPa
+                  filename: "_P850"                  
+                - text: 700 hPa
+                  filename: "_P700"
+                - text: 500 hPa
+                  filename: "_P500"
+                - text: 200 hPa
+                  filename: "_P200" 
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff   
+        O3:
+            title: "Anomalous Pattern Correlation of Ozone Mixing Ratio (ppmg)"
+            src_template: 
+                - allmodel/daily/pcor/pcor{day}_O3{height}_{location}.png 
+            height:
+                - text: 100 hPa
+                  filename: "_P100" 
+                - text: 70 hPa
+                  filename: "_P70"                   
+                - text: 50 hPa
+                  filename: "_P50" 
+                - text: 30 hPa
+                  filename: "_P30"                  
+                - text: 20 hPa
+                  filename: "_P20" 
+                - text: 10 hPa
+                  filename: "_P10"  
+                - text: "t-p Map"
+                  filename: ""                                        
+            day:
+                - text: 1
+                  filename: _day1 
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10                  
+                - text: Mean 
+                  filename: dieoff  
+    SelectSFC:
+        T2m:
+            title: "2-m Air Temperature (K)"
+            src_template: 
+                - allmodel/daily/sfc/sfc{day}_T2m_SL1L2_{location}.png 
+            location:              
+                - text: Global
+                  filename: "{=MODE=}"
+                - text: NHX(20N-80N)
+                  filename: "{=MODE=}NHX"                  
+                - text: SHX(20S-80S)
+                  filename: "{=MODE=}SHX"
+                - text: TRO(20S-20N)
+                  filename: "{=MODE=}TRO"   
+                - text: N60(60N-90N)
+                  filename: "{=MODE=}N60"
+                - text: S60(60S-90S)
+                  filename: "{=MODE=}S60"                  
+                - text: NPO(N.Pacific)
+                  filename: "{=MODE=}NPO"
+                - text: SPO(S.Pacific)
+                  filename: "{=MODE=}SPO"      
+                - text: NAO(N. Atlantic)
+                  filename: "{=MODE=}NAO"
+                - text: SAO(S. Atlantic)
+                  filename: "{=MODE=}SAO"                  
+                - text: CAM(Central America)
+                  filename: "{=MODE=}CAM"
+                - text: NSA(N. South America)
+                  filename: "{=MODE=}NSA"                                                                                                                                                               
+            day:
+                - text: 0
+                  filename: _day0               
+                - text: 1
+                  filename: _day1 
+                - text: 2
+                  filename: _day2                   
+                - text: 3
+                  filename: _day3 
+                - text: 4 
+                  filename: _day4                                             
+                - text: 5
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 7
+                  filename: _day7                  
+                - text: 8
+                  filename: _day8
+                - text: 9
+                  filename: _day9                  
+                - text: 10 
+                  filename: _day10 
+            mean:                 
+                - text: Mean 
+                  filename: mean  
+        10mU:
+            title: "10-m Zonal Wind (m/s)"
+            src_template: 
+                - allmodel/daily/sfc/sfc{day}_U10m_SL1L2_{location}.png 
+            location:              
+                - text: Global
+                  filename: "{=MODE=}"
+                - text: NHX(20N-80N)
+                  filename: "{=MODE=}NHX"                  
+                - text: SHX(20S-80S)
+                  filename: "{=MODE=}SHX"
+                - text: TRO(20S-20N)
+                  filename: "{=MODE=}TRO"   
+                - text: N60(60N-90N)
+                  filename: "{=MODE=}N60"
+                - text: S60(60S-90S)
+                  filename: "{=MODE=}S60"                  
+                - text: NPO(N.Pacific)
+                  filename: "{=MODE=}NPO"
+                - text: SPO(S.Pacific)
+                  filename: "{=MODE=}SPO"      
+                - text: NAO(N. Atlantic)
+                  filename: "{=MODE=}NAO"
+                - text: SAO(S. Atlantic)
+                  filename: "{=MODE=}SAO"                  
+                - text: CAM(Central America)
+                  filename: "{=MODE=}CAM"
+                - text: NSA(N. South America)
+                  filename: "{=MODE=}NSA"                                                                                                                                                               
+            day:
+                - text: 0
+                  filename: _day0               
+                - text: 1
+                  filename: _day1 
+                - text: 2
+                  filename: _day2                   
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10 
+            mean:                 
+                - text: Mean 
+                  filename: mean  
+        10mV:
+            title: "10-m Meridional Wind (m/s)"
+            src_template: 
+                - allmodel/daily/sfc/sfc{day}_V10m_SL1L2_{location}.png 
+            location:              
+                - text: Global
+                  filename: "{=MODE=}"
+                - text: NHX(20N-80N)
+                  filename: "{=MODE=}NHX"                  
+                - text: SHX(20S-80S)
+                  filename: "{=MODE=}SHX"
+                - text: TRO(20S-20N)
+                  filename: "{=MODE=}TRO"   
+                - text: N60(60N-90N)
+                  filename: "{=MODE=}N60"
+                - text: S60(60S-90S)
+                  filename: "{=MODE=}S60"                  
+                - text: NPO(N.Pacific)
+                  filename: "{=MODE=}NPO"
+                - text: SPO(S.Pacific)
+                  filename: "{=MODE=}SPO"      
+                - text: NAO(N. Atlantic)
+                  filename: "{=MODE=}NAO"
+                - text: SAO(S. Atlantic)
+                  filename: "{=MODE=}SAO"                  
+                - text: CAM(Central America)
+                  filename: "{=MODE=}CAM"
+                - text: NSA(N. South America)
+                  filename: "{=MODE=}NSA"    
+                - text: ASA(ASia)
+                  filename: "ASIA"                                                                                                                                                             
+            day:
+                - text: 0
+                  filename: _day0               
+                - text: 1
+                  filename: _day1 
+                - text: 2
+                  filename: _day2                   
+                - text: 3
+                  filename: _day3                           
+                - text: 5 
+                  filename: _day5                                                
+                - text: 6 
+                  filename: _day6
+                - text: 8
+                  filename: _day8
+                - text: 10 
+                  filename: _day10 
+            mean:                 
+                - text: Mean 
+                  filename: mean                   
